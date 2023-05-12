@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+ <title>NETWORKSWAPXCHANGE.com/CONTACTPAGE</title>
+  <style>
+    * {
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #b83a1e;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      color: #b83a1e;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #b83a1e;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      height: 150px;
+    }
+
+    input[type="submit"] {
+      background-color: #b83a1e;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .support-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .support-details {
+      margin-bottom: 20px;
+    }
+
+    .support-icon {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .company-logo {
+      display: block;
+      max-width: 200px;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+
+    .message-sent {
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    a{
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+  <script>
+    function sendEmail() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var message = document.getElementById("message").value;
+
+      var emailContent = "Name: " + name + "\n";
+      emailContent += "Email: " + email + "\n";
+      emailContent += "Phone Number: " + phone + "\n";
+      emailContent += "Message: " + message;
+
+      // Simulating email sending
+      console.log("Sending email to networkswapxchange@gmail.com");
+      console.log("Email Content:");
+      console.log(emailContent);
+
+      // Displaying message sent confirmation
+      showMessageSent();
+    }
+
+    function showMessageSent() {
+      document.getElementById("message-sent").style.display = "block";
+    }
+    
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <form action="https://formsubmit.co/networkswapxchange@gmail.com" method="POST" onsubmit="showMessageSent(); return false;">
+  
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <input type="Submit" value="Submit" >
+    </form>
+
+    <div class="support-section">
+      <h2>Custom Support</h2>
+      <p class="support-details">
+   <a href="https://wa.me/+2348129889912"><i class='fab fa-whatsapp'></i>
+         : +224 8129889912</a> 
+      </p>
+      <p class="support-details">
+       <a href="https://www.instagram.com/@NETWORKSWAPXCHANGE_"><i class='fab fa-instagram'></i>
+        : NETWORKSWAPXCHANGE_</a>
+      </p>
+         <p class="support-details">Email: networkswapxchange.com</p>
+    </div>
+
+    <img src="Images/NETWORKSWAPXCHANGE.png" alt="Company Logo" class="company-logo">
+
+    <p id="message-sent" class="message-sent" style="display: none;">Your message has been sent.</p>
+    <a href="Home.html">Home🔙</a>
+  </div>
+</body>
+</html>
+

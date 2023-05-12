@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NETWORKSWAPXCHANGE.com/LifeCryptocurrency</title>
+  <style>
+    * {
+      font-weight: bold;
+    }
+
+    /* CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #b83a1e;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .crypto-info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+
+    .crypto-info p {
+      margin: 0;
+    }
+
+
+    a {
+      position: absolute;
+      cursor: pointer;
+      color: black;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      padding: 10px;
+      background: #b83a1e;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+    }
+
+    /* Loading animation */
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      display: none;
+    }
+
+    .loader {
+      border: 8px solid #f3f3f3; /* Light gray */
+      border-top: 8px solid #b83a1e; /* Reddish color */
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>CRYPTO PRICE</h1>
+    <div class="crypto-info">
+      <p>Bitcoin:</p>
+      <p id="bitcoinPrice">Loading...</p>
+    </div>
+    <div class="crypto-info">
+      <p>Tron:</p>
+      <p id="tronPrice">Loading...</p>
+    </div>
+    <div class="crypto-info">
+      <p>Binance Coin:</p>
+      <p id="binancePrice">Loading...</p>
+    </div>
+    <div class="crypto-info">
+      <p>Dogecoin:</p>
+      <p id="dogePrice">Loading...</p>
+    </div>
+    <div class="crypto-info">
+      <p>Litecoin:</p>
+      <p id="litecoinPrice">Loading...</p>
+    </div>
+    <div class="crypto-info">
+      <p>Alternative Coin:</p>
+      <p id="altcoinPrice">Loading...</p>
+    </div>
+    <a href="Home.html" onclick="showLoading()"> &#8592; Back</a>
+  </div>
+
+    <img src="Images/NETWORKSWAPXCHANGE.png" alt="networkswapxchange" width="100%" />
+
+  <div class="loading-overlay">
+    <div class="loader"></div>
+  </div>
+
+  <script>
+    // JavaScript code to fetch and update cryptocurrency data using CoinGecko API
+
+    // Define the cryptocurrency symbols
+    const symbols = ["bitcoin", "tron", "binancecoin", "dogecoin", "litecoin", "alternative-coin"];
+
+    // Fetch cryptocurrency prices
+    async function fetchPrices() {
+      try {
+        const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${symbols.join(",")}&vs_currencies=usd`);
+        const data = await response.json();
+
+        // Update the DOM with the fetched prices
+        document.getElementById("bitcoinPrice").textContent = "$" + data.bitcoin.usd;
+        document.getElementById("tronPrice").textContent = "$" + data.tron.usd;
+        document.getElementById("binancePrice").textContent = "$" + data.binancecoin.usd;
+        document.getElementById("dogePrice").textContent = "$" + data.dogecoin.usd;
+        document.getElementById("litecoinPrice").textContent = "$" + data.litecoin.usd;
+        document.getElementById("altcoinPrice").textContent = data["alternative-coin"].usd;
+      } catch (error) {
+        console.error("Error fetching cryptocurrency prices:", error);
+      }
+    }
+
+    // Call the fetchPrices function to retrieve and update the prices
+    fetchPrices();
+
+    // Function to navigate back to the home page and show loading overlay
+    function showLoading() {
+      document.querySelector(".loading-overlay").style.display = "flex";
+      setTimeout(() => {
+        window.location.href = "Home.html";
+      }, 5000); // Wait for 5 seconds before redirecting
+    }
+  </script>
+</body>
+</html>

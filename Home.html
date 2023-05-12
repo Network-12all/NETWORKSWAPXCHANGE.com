@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>NETWORKSWAPXCHANGE.com</title>
+  <style>
+     * {
+       font-weight: bold;
+     }
+     
+    /* Styling for the menu bar */
+    .menu-bar {
+      background-color: #b83a1e;
+      color: #fff;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+    
+    .menu-bar .menu-items {
+      display: none;
+    }
+    
+    .menu-bar .menu-icon {
+      cursor: pointer;
+    }
+    
+    .menu-bar .menu-icon span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin-bottom: 5px;
+    }
+    
+    .menu-bar .menu-items a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    
+    /* Styling for the icons */
+    .social-icons {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      border-spacing: 2px;
+    }
+    
+    .social-icons a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    /* Styling for the exchange portfolio section */
+    .exchange-portfolio {
+      background-image: url(Images/BTC.png);
+      opacity: 5px;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      color: #ffffff;
+      padding: 50px 0;
+    }
+
+    .exchange-portfolio h1 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .exchange-portfolio p {
+      font-size: 18px;
+      color: black;
+    }
+
+    /* Styling for the footer */
+    .footer {
+      background-color: #b83a1e;
+      color: #fff;
+      padding: 8px;
+      text-align: center;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+    }
+
+    .footer p {
+      margin: 10px 0;
+    }
+    
+    .container-cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-wrap: wrap;
+    }
+    
+    .card {
+      background-color: #fff;
+      color: #b83a1e;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 300px;
+      margin: 7px 10px;
+      text-align: center;
+    }
+    
+    .card img {
+      border-radius: 50px;
+      width: 90px;
+      height: 90px;
+      margin-bottom: 20px;
+    }
+    
+    button {
+      background-color: #b83a1e;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .additional-content {
+      text-align: center;
+      padding: 50px;
+      background-color: #f9f9f9;
+      margin-top: 180px;
+      margin-bottom: 100px;
+    }
+    
+    .additional-content h1 {
+      color: #b83a1e;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .additional-content p {
+      color: #b83a1e;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    
+    .start-button {
+      background-color: #b83a1e;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .start-button:hover {
+      background-color: #942b16;
+    }
+    
+    .horizontal-moving {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowed content */
+  position: relative; /* Position the container */
+  color: #b83a1e;
+  -webkit-text-stroke: 1px black; /* Apply the stroke effect */
+  text-shadow: 0 0 0 black; /* Add a shadow to enhance the stroke effect */
+
+}
+
+.horizontal-moving p {
+  display: inline-block; /* Display content in a single line */
+  animation: moveText 5s linear infinite; /* Apply animation to the content */
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(100%); /* Start from right side */
+  }
+  100% {
+    transform: translateX(-100%); /* Move to left side */
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="menu-bar">
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="menu-items">
+      <a href="Home.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Cryptorates.html">Coin Rates</a>
+      <a href="Contactus.html">Contact Us</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://wa.me/+2348129889912"><i class='fab fa-whatsapp'></i></a>
+      <a href="https://www.instagram.com/@NETWORKSWAPXCHANGE_"><i class='fab fa-instagram'></i></a>
+      <a href="https://www.twitter.com/@boi_nwtwork"><i class='fab fa-twitter'></i></a>
+    </div>
+  </div>
+
+  <div class="exchange-portfolio">
+    <h1>Secured And Trusted Exchange Platform</h1>
+    <p>Trade your digital currency and redeem your card with us for fast payment in minutes.</p>
+    <a href="https://wa.me/+2348129889912"><button>Get Started</button></a>
+  </div>
+
+  <div class="container-cards">
+    <div class="card">
+      <img src="Images/Reliability.png" alt="Image 1">
+      <h3>Reliability</h3>
+      <p>Built for you customer first</p>
+    </div>
+
+    <div class="card">
+      <img src="Images/Speed.png">
+      <h3>Speed</h3>
+      <p>Instant, on-demand swift transaction</p>
+    </div>
+
+    <div class="card">
+      <img src="Images/Certainty.png" alt="Image 3">
+      <h3>Certainty</h3>
+      <p>100% Guarantee on all exchanges</p>
+    </div>
+        <div class="card">
+      <img src="Images/Cost.png" alt="Image 4">
+      <h3>Cost</h3>
+      <p>Best rates available</p>
+    </div>
+  </div>
+
+  <div class="additional-content">
+    <h1>We are a Digital Currency Exchange You Can Trust</h1>
+    <p>NETWORKSWAPXCHANGE is a one-stop shop for trading bitcoin, gift cards, and other digital currencies with incredible rates. Here at NETWORKSWAPXCHANGE, we are here to make your trade easy and stress-less, no matter the amount, we got you covered.</p>
+    <p>NO exchange is too big or too small.</p>
+    
+    <br />
+     
+    <h1>Trade in your Bitcoin</h1>
+    <p>The NETWORKSWAPXCHANGE system is built and tailored to serve and fully satisfy you. Our trading is seamless and with no hassle, taking little or no time. Click on the button below to start trading.</p>
+    <br />
+       <a href="https://wa.me/+2348129889912"><button class="start-button">Get Started</button></a>
+  </div>
+
+  <!-- ... previous HTML code ... -->
+
+  <div class="footer">
+    <p>Company Email: networkswapxchange@gmail.com</p>
+    <p>WhatsApp: +2348129889912</p>
+    <p>Location: 29 Mbaukwu, Anambra, Nigeria</p>
+  </div>
+  <marquee behavior="scroll" direction="left" class="horizontal-moving">
+  we're the NETWORKSWAPXCHANGE feel free to say any thing. The ceo of this company is okolo kamdilichukwu samuel. The manager is Onizulike kenenna divinefavour. we trade on different kinds of asset we also have alot of gift card with us. we have our foreign banks at good rates. if you have any questions contact our bot at the right down of your screen. thanks for joining us
+  </marquee>
+
+
+  <!-- Start of Tawk.to Script -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/645e070e74285f0ec46b0ef0/1h07kn5mb';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!-- End of Tawk.to Script -->
+
+  <script>
+    // Function to toggle the menu items when the menu icon is clicked
+    function toggleMenu() {
+      var menuItems = document.querySelector('.menu-items');
+      menuItems.style.display = (menuItems.style.display === 'none') ? 'block' : 'none';
+    }
+
+    // Add event listener to the menu icon
+    var menuIcon = document.querySelector('.menu-icon');
+    menuIcon.addEventListener('click', toggleMenu);
+  </script>
+
+</body>
+</html>
+
+
